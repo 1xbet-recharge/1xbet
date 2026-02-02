@@ -2,645 +2,327 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>1XBET | Dépôt & Retrait Officiel – Code Promo Ria229</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>1XBET | Dépôt & Retrait – Code Promo Ria229</title>
 <style>
-:root{
-    --blue:#1e90ff;
-    --dark:#020814;
-    --gold:#f2c200;
-}
+/* === BASE === */
+*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+body{background:#020814; color:#fff;}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
-    background: var(--dark);
-    color:#fff;
-}
-
-
-
-/* MAIN BANNER */
-.banner{
-    min-height:100vh;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-
-    background-image:
-        
-        url("./arrière.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    
-}
-
-/* HEADER */
+/* === HEADER === */
 .top-header{
     width:100%;
     background:#0F9EF7;
-    border-bottom:1px solid rgba(255,255,255,0.08);
     position:sticky;
     top:0;
     z-index:100;
+    border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
 .header-container{
     max-width:1200px;
     margin:auto;
-    padding:14px 20px;
+    padding:10px 20px;
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+}
+
+.logo-zone img{
+    height:60px;
+}
+
+.main-nav{
+    display:flex;
+    gap:25px;
     align-items:center;
 }
 
-
-
-/* MENU */
 .main-nav a{
-    color:#fff;
     text-decoration:none;
-    margin-left:28px;
-    font-size:15px;
-    letter-spacing:1px;
+    color:#000;
+    font-weight:700;
+    font-size:16px;
+    padding:8px 12px;
+    border-radius:6px;
+    transition: all 0.3s;
     position:relative;
-    opacity:0.85;
+    cursor:pointer;
 }
 
 .main-nav a::after{
     content:"";
     position:absolute;
-    left:0;
-    bottom:-6px;
+    bottom:-4px;
+    left:50%;
+    transform:translateX(-50%);
     width:0;
     height:2px;
-    background:#1e90ff;
-    transition:width .3s;
+    background:red;
+    transition:width 0.3s;
 }
 
-.main-nav a:hover{
-    opacity:1;
-}
+.main-nav a:hover::after{width:100%;}
+.main-nav a:hover{background: rgba(255,255,255,0.15); color:#1e90ff;}
 
-.main-nav a:hover::after{
+/* === HERO === */
+.banner{
     width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image:url('./arrière.jpg');
+    background-size:cover;
+    background-position:center;
 }
-
-/* MOBILE */
-@media(max-width:768px){
-    .main-nav{
-        display:none;
-    }
-}
-
-
-
-
-
 
 .banner-content{
     max-width:900px;
-    margin-bottom: 200px;
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:25px; /* spacing vertical */
+    text-align:center;
 }
 
-/* LOGO */
+/* LOGO HERO */
 .logo{
-    width:800px;
-    max-width:80%;
-    margin-bottom:25px;
+    width:220px;
+    margin-bottom:10px;
 }
 
 /* TITLE */
 .title{
-    font-size:34px;
-    letter-spacing:3px;
-    margin-bottom:40px;
+    font-size:32px;
+    font-weight:800;
     text-transform:uppercase;
 }
 
-/* PROMO */
+/* SECURE LABEL */
+.security-label{
+    font-size:14px;
+    font-weight:600;
+}
 
+/* INTRO TEXT */
+.intro-text{
+    font-size:16px;
+    line-height:1.5;
+    max-width:700px;
+}
 
+/* CTA BUTTON */
+.cta{
+    padding:14px 32px;
+    font-size:18px;
+    font-weight:500;
+    color:#fff;
+    background:linear-gradient(90deg,#1e90ff,#004bff);
+    border-radius:12px;
+    text-decoration:none;
+    box-shadow:0 6px 18px rgba(30,144,255,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation:pulseCTA 1.6s infinite alternate;
+}
 
+.cta:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(30,144,255,0.7);}
+
+@keyframes pulseCTA{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+
+/* PROMO BOX */
 .promo-box{
-    display:inline-flex;           /* ⬅️ clé du problème */
+    display:flex;
     flex-direction:column;
     align-items:center;
-
-    padding:14px 20px;             /* ⬅️ ajustement horizontal réel */
-    margin-bottom:35px;
-
-    border-radius:18px;
     background:#A11F05;
-    backdrop-filter:blur(6px);
-    text-align:center;
-
-    box-shadow:
-    0 0 40px rgba(220,0,0,0.6),
-    0 0 80px rgba(180,0,0,0.4);
-
-    animation: promoPulse 1.6s infinite;
+    padding:10px 25px; /* réduit horizontalement */
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(220,0,0,0.6),0 0 60px rgba(180,0,0,0.4);
+    animation:promoPulse 1.6s infinite;
+    margin-bottom:25px;
 }
 
-
 .promo-label{
-    font-size:18px;
-    font-weight:600;
-    letter-spacing:4px;
-    opacity:0.85;
-    margin-bottom:12px;
-    text-transform:uppercase;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    margin-bottom:4px; /* réduit l’espace vertical */
 }
 
 .promo-code{
-    font-size:70px !important;
-    font-weight:900 !important;
-    line-height:1 !important;
-    letter-spacing:1px;
-    color:#ffffff;
-    display:block;
-
-    font-size:120px;      /* réduit la hauteur globale */
+    font-size:85px; /* légèrement plus petit */
     font-weight:900;
-    line-height:1;        /* garde le texte serré verticalement */
-    margin-top:10px;      /* espace au-dessus */
-    margin-bottom:10px;   /* espace en dessous */
+    line-height:1;
 }
 
-}
-
-
-
-.security-label{
-    margin-top:-25px;
-    margin-bottom:35px;
-    font-size:15px;
-    font-weight:600;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#dbe8ff;
-    opacity:0.9;
-}
-
-
-@keyframes promoPulse{
-    0%{ transform:scale(1); }
-    50%{ transform:scale(1.15); }
-    100%{ transform:scale(1); }
-}
-
-
-@keyframes promoPulse{
-    0%{ transform:scale(1); }
-    50%{ transform:scale(1.12); }
-    100%{ transform:scale(1); }
-}
-
-/* CTA */
-.cta{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:12px 28px;       /* largeur horizontale ajustée */
-    font-size:18px;           /* taille texte */
-    font-weight:400;          /* police NON GRAS */
-    letter-spacing:1.2px;
-    text-decoration:none;
-    color:#fff;
-
-    border-radius:12px;
-    background: linear-gradient(90deg, #1e90ff, #004bff);
-    box-shadow:0 6px 18px rgba(30,144,255,0.5);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: pulseCTA 1.6s infinite alternate;  /* animation pulse */
-}
-
-/* HOVER pour plus d’interaction */
-.cta:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 28px rgba(30,144,255,0.7);
-}
-
-/* ANIMATION PULSE */
-@keyframes pulseCTA{
-    0%{ transform:scale(1); box-shadow:0 6px 18px rgba(30,144,255,0.5);}
-    50%{ transform:scale(1.05); box-shadow:0 10px 28px rgba(30,144,255,0.6);}
-    100%{ transform:scale(1); box-shadow:0 6px 18px rgba(30,144,255,0.5);}
-}
-.title{
-    font-size:36px;
-    font-weight:800;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:40px;
-}
-
-.intro-text{
-    max-width:720px;
-    margin:0 auto 35px;
-    font-size:17px;
-    line-height:1.7;
-    color:#e6efff;
-    opacity:0.95;
-}
-
-.promo-box{
-    margin-top:40px; /* ⬅️ espace net */
-}
-
-
-
-/* HEADER */
-.top-header{
-    width:100%;
-    background:#00000; /* bleu ciel */
-    border-bottom:1px solid rgba(255,255,255,0.15);
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-
-/* CONTENEUR CENTRAL */
-.header-container{
-    display:flex;
-    justify-content:center;   /* centre logo + menu horizontalement */
-    align-items:center;
-    gap:5px;                 /* réduit fortement l’espace entre logo et menu */
-    padding:15px 20px;         /* réduit l’espace autour du container */
-}
-
-/* Supprime les marges internes du logo et du menu */
-.logo-zone, .main-nav{
-    margin:0;
-    padding:0;
-}
-
-/* Assure que le logo et le menu sont alignés */
-.logo-zone img{
-    display:block;
-    height:25px; /* taille réduite si nécessaire */
-}
-
-
-/* MENU HORIZONTAL STYLÉ */
-.main-nav{
-    display:flex;
-    gap:35px;             /* espace entre les liens */
-    align-items:center;
-}
-
+/* === MENU AVEC FOND ET CONTOUR === */
 .main-nav a{
-    position:relative;
-    color:#000;            /* texte noir sur fond bleu ciel */
-    font-size:16px;
-    font-weight:600;
-    letter-spacing:1.2px;
     text-decoration:none;
-    padding:6px 0;
-    transition: all 0.3s ease;
-}
-
-/* LIGNE DE SURVOL DYNAMIQUE */
-.main-nav a::after{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:-4px;
-    transform:translateX(-50%);
-    width:0;
-    height:2px;
-    background: #ff0000;  /* ligne rouge */
-    transition: width 0.3s ease;
-}
-
-.main-nav a:hover::after{
-    width:100%;           /* ligne complète sur hover */
+    color:#fffff;
+    font-weight:700;
+    font-size:16px;
+    padding:8px 14px;
+    border-radius:8px;
+    border:1px solid #fff;   /* contour blanc */
+    .background:rgba(255,255,255,0.15); /* fond semi-transparent */
+    transition: all 0.3s;
+    position:relative;
 }
 
 .main-nav a:hover{
-    color:#1e90ff;        /* changement de couleur texte au hover */
-    opacity:1;
+    background:#012E47; /* foncé au hover */
+    color:#1e90ff;
 }
 
-/* BANNIÈRE BONUS */
+.main-nav a::after{
+    display:none; /* on peut enlever la ligne si on veut contour visible */
+}
+
+
+@keyframes promoPulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.12);}
+    100%{transform:scale(1);}
+}
+
+/* BONUS BANNER */
 .bonus-banner{
-     padding:8px 10px;    /* réduit la hauteur */
-    font-size:16px;      /* un peu plus petit si nécessaire */
     position:fixed;
     bottom:0;
-    left:0;
     width:100%;
     background:linear-gradient(90deg,#ffcc00,#ff9900);
     color:#000;
     text-align:center;
-    
-    
+    padding:8px 10px;
     font-weight:700;
-    letter-spacing:1px;
-    z-index:999;
     box-shadow:0 -4px 15px rgba(0,0,0,0.3);
-
-    animation: slideBonus 2s ease-out forwards;
 }
 
-/* ANIMATION SLIDE FROM BOTTOM */
-@keyframes slideBonus{
-    0%{
-        transform:translateY(100%);
-        opacity:0;
-    }
-    100%{
-        transform:translateY(0);
-        opacity:1;
-    }
-}
+.bonus-content{animation:pulseText 1.8s infinite alternate;}
+@keyframes pulseText{0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
 
-/* PULSE LÉGER DU TEXTE */
-.bonus-content{
-    display:inline-block;
-    animation: pulseText 1.8s infinite alternate;
-}
-
-@keyframes pulseText{
-    0%{ transform:scale(1); }
-    50%{ transform:scale(1.05); }
-    100%{ transform:scale(1); }
-}
-
-/* MOBILE */
+/* MOBILE ADJUSTMENTS */
 @media(max-width:768px){
-    .bonus-banner{
-        font-size:16px;
-        padding:12px 8px;
-    }
-}
-
-
-/* MOBILE */
-@media(max-width:768px){
-    .main-nav{
-        flex-direction:row;
-        flex-wrap:wrap;
-        gap:20px;
-        justify-content:center;
-    }
-
+    /* Enlever le curseur sur le menu */
     .main-nav a{
-        font-size:14px;
-        padding:4px 0;
+        cursor: default;  /* plus de pointeur */
+        padding:6px 10px; /* réduit l’espace horizontal */
+        font-size:15px;   /* légèrement plus petit pour compacter */
     }
+
+    .logo-zone img{
+    height:40px;
 }
 
 
-
-/* FOOTER */
-footer{
-    background:#000;
-    text-align:center;
-    padding:18px;
-    font-size:13px;
-    opacity:.65;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    .promo-code{font-size:32px;}
-    .title{font-size:26px;}
-    .logo{width:260px;}
-}
-
-@media(max-width:768px){
-    .promo-code-big{
-        font-size:38px;
-    }
-    .promo-box{
-        padding:30px 40px;
-    }
-    @media(max-width:768px){
-    .title{
-        font-size:26px;
-        letter-spacing:2px;
-    }
-@media(max-width:768px){
-    .security-label{
-        font-size:13px;
-        letter-spacing:2px;
-    }
-}
-
-@media(max-width:768px){
-    .intro-text{
-        font-size:15px;
-        padding:0 10px;
-    }
-}
-
-@media(max-width:768px){
-    .cta{
-        padding:14px 22px;
-        font-size:15px;
-        border-radius:10px;
-    }
-}
-
-@media(max-width:768px){
-    .promo-box{
-        margin-bottom:22px;
-    }
-
-    .cta{
-        margin-top:6px;
-    }
-}
-
-@media(max-width:768px){
-    .promo-box{
-        padding:22px 20px;
-    }
-
-    .promo-code{
-        font-size:48px;
-        letter-spacing:3px;
-    }
-}
-
-@media(max-width:768px){
-    .promo-code{
-        font-size:80px !important;
-    }
-}
-
-/* MOBILE : toujours visible */
-@media(max-width:768px){
-    .main-nav{
-        display:flex !important;       /* ⬅️ force l’affichage */
-        flex-direction:column;
-        gap:8px;
-        align-items:flex-start;
-    }
-    .main-nav a{
-        font-size:16px;
-        margin-left:0;
-        padding:8px 0;
-    }
+    /* Conteneur header plus compact */
     .header-container{
         flex-direction:column;
-        align-items:flex-start;
-    }
-}
-/* MOBILE */
-@media(max-width:768px){
-    .header-container{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    .main-nav{
-        flex-direction:row;
-        gap:15px;
-        justify-content:center;
-    }
-
-    .main-nav a{
-        font-size:14px;
-    }
-}
-
-@media(max-width:768px){
-    .header-container{
-        flex-direction:column;
-        align-items:center;
-        gap:12px;
-    }
-
-    .main-nav{
-        flex-direction:row;
-        gap:15px;
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .main-nav a{
-        font-size:14px;
-    }
-
-    .cta{
-        width:100%;
-        text-align:center;
-        padding:12px 0;
-        font-size:15px;
-    }
-}
-
-@media(max-width:768px){
-    .cta{
-        padding:10px 20px;
-        font-size:16px;
-        width:90%;       /* ajusté à l’écran mobile */
-        text-align:center;
-    }
-}
-@media(max-width:768px){
-    .header-container{
-        flex-direction:column; /* empile logo + menu verticalement */
-        gap:12px;              /* espace réduit entre logo et menu */
+        gap:8px;        /* réduit l’espace entre logo et menu */
         padding:20px 10px;
     }
-}
 
-@media(max-width:768px){
-
-.banner-content{
-    max-width:900px;
-    margin-bottom: 200px;
+    /* Banner content plus serré */
+    .banner-content{
+        gap:12px;        /* réduit l’espace vertical entre logo, titre, texte, CTA et code promo */
+        width:95%;       /* maximise l’espace horizontal */
+        padding:25px 5px;
     }
+
+    /* Logo plus petit */
+    .logo{
+        width:300px;
+        margin-bottom:8px;
+    }
+
+    /* Titre plus compact */
+    .title{
+        font-size:22px;
+        margin-bottom:4px;
+    }
+
+    /* Texte sécurité plus compact */
+    .security-label{
+        font-size:25px;
+        margin-bottom:6px;
+    }
+
+    /* Intro texte */
+    .intro-text{
+        font-size:14px;
+        margin-bottom:6px;
+        line-height:1.4;
+    }
+
+    /* CTA */
+    .cta{
+        font-size:15px;
+        padding:10px 18px;
+        width:100%;
+        margin-bottom:40px;
+    }
+
+    /* Promo box */
+  
+
+    .promo-box{
+        padding:8px 20px;
+        margin-bottom:-40px;
+    }
+    .promo-code{
+        font-size:80px;
+    }
+    .main-nav a{
+        font-size:14px;
+        padding:6px 10px;
+        border:2px solid #fff;
+        background:rgba(255,255,255,0.15);
+    }
+    
 }
-
-
-
 
 </style>
 </head>
-
 <body>
 
-   <header class="top-header">
-  <div class="header-container">
-    <!-- Logo centré -->
-    <div class="logo-zone">
-      <img src="2.png" alt="1XBET Logo">
+<header class="top-header">
+    <div class="header-container">
+        <div class="logo-zone"><img src="2.png" alt="1XBET Logo"></div>
+        <nav class="main-nav">
+            <a href="https://wa.me/22962003165" target="_blank">DÉPÔT</a>
+            <a href="https://wa.me/22962003165" target="_blank">RETRAIT</a>
+            <a href="https://wa.me/22962003165" target="_blank">CONTACT</a>
+        </nav>
     </div>
-
-    <!-- Menu horizontal -->
-    <nav class="main-nav">
-      <a href="https://wa.me/22962003165" target="_blank">DÉPÔT</a>
-      <a href="https://wa.me/22962003165" target="_blank">RETRAIT</a>
-      <a href="https://wa.me/22962003165" target="_blank">CONTACT</a>
-    </nav>
-
-    
-  </div>
 </header>
-
-
-
-
 
 <section class="banner">
     <div class="banner-content">
-
-        <img src="3.png" alt="1XBET Logo" class="logo">
-
+        <img src="3.png" class="logo">
         <div class="title">DÉPÔT ET RETRAIT GRATUIT</div>
         <div class="security-label">🔒 100 % SÉCURISÉ</div>
-
         <p class="intro-text">
-    Rejoignez 1XBET dès maintenant. Inscrivez-vous sur une plateforme fiable et sécurisée,
-    reconnue pour la rapidité de ses dépôts et retraits.
-    Utilisez le <strong>code promo : Ria229</strong><br>
-    lors de votre inscription et bénéficiez
-    d’avantages exclusifs réservés aux nouveaux joueurs.
-</p>
-
-
-
-     
-        <a href="https://1xbet.bj/fr/mobile" target="_blank" class="cta">CLIQUEZ ICI POUR VOUS INSCRIRE</a>
-
-
-       <div class="promo-box">
-    <span class="promo-label">CODE PROMO OFFICIEL</span>
-    <span class="promo-code">Ria229</span>
-</div>
-
-
-
-
-       
-
-        
-
+            Rejoignez 1XBET dès maintenant. Utilisez le <strong>code promo : Ria229</strong> lors de votre inscription
+            et bénéficiez d’avantages exclusifs réservés aux nouveaux joueurs.
+        </p>
+        <a href="https://1xbet.bj/fr/mobile" class="cta" target="_blank">CLIQUEZ ICI POUR VOUS INSCRIRE</a>
+        <div class="promo-box">
+            <span class="promo-label">CODE PROMO OFFICIEL</span>
+            <span class="promo-code">Ria229</span>
+        </div>
     </div>
 </section>
 
 <footer class="bonus-banner">
-    <div class="bonus-content">
-        🎁 Bonus spécial : recevez jusqu’à 130 000 FCFA sur votre premier dépôt !
-    </div>
-   
+    <div class="bonus-content">🎁 Bonus spécial : recevez jusqu’à 130 000 FCFA sur votre premier dépôt !</div>
 </footer>
 
 </body>
