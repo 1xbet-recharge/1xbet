@@ -110,7 +110,7 @@ body{
 
 .banner-content{
     max-width:900px;
-    margin-bottom: 180px;
+    margin-bottom: 200px;
 }
 
 /* LOGO */
@@ -169,6 +169,14 @@ body{
     letter-spacing:1px;
     color:#ffffff;
     display:block;
+
+    font-size:120px;      /* réduit la hauteur globale */
+    font-weight:900;
+    line-height:1;        /* garde le texte serré verticalement */
+    margin-top:10px;      /* espace au-dessus */
+    margin-bottom:10px;   /* espace en dessous */
+}
+
 }
 
 
@@ -266,20 +274,25 @@ body{
 
 /* CONTENEUR CENTRAL */
 .header-container{
-    max-width:1200px;
-    margin:auto;
-    padding:10px 20px;
     display:flex;
-    justify-content:center;  /* centre logo + menu + bouton */
+    justify-content:center;   /* centre logo + menu horizontalement */
     align-items:center;
-    gap:40px;
+    gap:5px;                 /* réduit fortement l’espace entre logo et menu */
+    padding:15px 20px;         /* réduit l’espace autour du container */
 }
 
-/* LOGO */
-.logo-zone img{
-    height:25px;   /* réduit la taille */
-    display:block;
+/* Supprime les marges internes du logo et du menu */
+.logo-zone, .main-nav{
+    margin:0;
+    padding:0;
 }
+
+/* Assure que le logo et le menu sont alignés */
+.logo-zone img{
+    display:block;
+    height:25px; /* taille réduite si nécessaire */
+}
+
 
 /* MENU HORIZONTAL STYLÉ */
 .main-nav{
@@ -323,6 +336,8 @@ body{
 
 /* BANNIÈRE BONUS */
 .bonus-banner{
+     padding:8px 10px;    /* réduit la hauteur */
+    font-size:16px;      /* un peu plus petit si nécessaire */
     position:fixed;
     bottom:0;
     left:0;
@@ -330,8 +345,8 @@ body{
     background:linear-gradient(90deg,#ffcc00,#ff9900);
     color:#000;
     text-align:center;
-    padding:14px 10px;
-    font-size:18px;
+    
+    
     font-weight:700;
     letter-spacing:1px;
     z-index:999;
@@ -538,6 +553,21 @@ footer{
         text-align:center;
     }
 }
+@media(max-width:768px){
+    .header-container{
+        flex-direction:column; /* empile logo + menu verticalement */
+        gap:12px;              /* espace réduit entre logo et menu */
+        padding:20px 10px;
+    }
+}
+
+@media(max-width:768px){
+
+.banner-content{
+    max-width:900px;
+    margin-bottom: 200px;
+    }
+}
 
 
 
@@ -596,11 +626,6 @@ footer{
     <span class="promo-code">Ria229</span>
 </div>
 
-<section class="bonus-banner">
-    <div class="bonus-content">
-        🎁 Bonus spécial : recevez jusqu’à 130 000 FCFA sur votre premier dépôt !
-    </div>
-</section>
 
 
 
@@ -611,8 +636,11 @@ footer{
     </div>
 </section>
 
-<footer>
-    © 2026 – Service indépendant de dépôt & retrait 1XBET
+<footer class="bonus-banner">
+    <div class="bonus-content">
+        🎁 Bonus spécial : recevez jusqu’à 130 000 FCFA sur votre premier dépôt !
+    </div>
+   
 </footer>
 
 </body>
